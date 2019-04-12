@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://missile/Missile.gd" type="Script" id=1]
+[ext_resource path="res://missile/spaceMissiles_040.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.84661, 2.69215 )
+
+[node name="Missile" type="RigidBody2D"]
+position = Vector2( 260, 210 )
+collision_layer = 2
+mass = 0.1
+gravity_scale = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Collidor" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
